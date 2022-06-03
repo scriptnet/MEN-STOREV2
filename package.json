@@ -1,0 +1,40 @@
+{
+  "name": "loader_electron",
+  "version": "1.0.0",
+  "description": "solo es una practica",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "publish": "electron-builder --win -p always"
+  },
+  "build": {
+    "appId": "scriptnet.men.store",
+    "productName": "MEN-STORE",
+    "directories": {
+      "output": "electron-build",
+      "buildResources": "build-assets"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "publish": [{
+      "provider": "github",
+      "owner": "iffy",
+      "repo": "MEN-STOREV2"
+    }]
+  },
+  "author": "SCRIPTNET",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "electron-is-dev": "^2.0.0",
+    "electron-log": "^4.4.7",
+    "electron-updater": "^5.0.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "electron": "^19.0.2",
+    "electron-builder": "^23.0.3"
+  }
+}
+
